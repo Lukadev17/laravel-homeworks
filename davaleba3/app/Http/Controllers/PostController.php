@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\OrderShippedMail;
 use App\Models\Post;
 use App\Models\User;
+use App\Notifications\OrderShippedNotification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -68,10 +69,11 @@ class PostController extends Controller
         $post->is_approved = true;
         $post->save();
         $user = User::find(1);
-        $user->notify(new OrderShippedMail($data));
+        $user->notify(new OrderShippedNotification($data));
         $mail = new MailController();
         $mail->send($data, $request);
         return redirect()->route('posts');
+//        return response(ok,200);
     }
 
     public function delete(Post $post) {

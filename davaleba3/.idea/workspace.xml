@@ -129,7 +129,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/laravel-homeworks-master/homework-3" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -156,6 +156,7 @@
       <workItem from="1608971002542" duration="22500000" />
       <workItem from="1609061070821" duration="3610000" />
       <workItem from="1609071143661" duration="13562000" />
+      <workItem from="1609098675926" duration="5881000" />
     </task>
     <servers />
   </component>
@@ -163,6 +164,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1609099961939">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609099961939" />
     <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1608980914250">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
