@@ -12,10 +12,11 @@ class OrderShippedMail extends Mailable
     use Queueable, SerializesModels;
 
     protected $data;
+
     /**
      * Create a new message instance.
      *
-     * @return void
+     * @param $data
      */
     public function __construct($data)
     {

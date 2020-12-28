@@ -30,9 +30,9 @@
                                 @can('approve', $post)
                                     <div>
                                         @if($post->is_approved)
-                                            <button type="submit" class="btn-dark approved" disabled>The article was approved</button>
+                                            <button type="submit" class="btn-info btn-approve" disabled>The article was approved</button>
                                         @else
-                                            <button type="submit" class="btn-dark" url="{{route('approve', $post->id)}}">Click to Approve</button>
+                                            <button type="submit" class="btn-dark btn-approve" url="{{route('approve', $post->id)}}">Click to Approve</button>
                                         @endif
                                     </div>
                                 @endcan
@@ -61,16 +61,15 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-            $(document).on('click', '.btn-dark', function (e) {
+            $(document).on('click', '.btn-approve', function (e) {
                 e.preventDefault();
                 $this = $(this)
-                // $this.attr('disabled', 'disabled');
                 $.ajax({
                     type: 'POST',
                     url:  $this.attr('url'),
                     success: function () {
-                        $this.addClass('approved');
-                        // $this.attr('disabled', 'disabled');
+                        $this.removeClass('btn-dark');
+                        $this.addClass('btn-info');
                         $this.text('The article was approved');
                     }
                 });

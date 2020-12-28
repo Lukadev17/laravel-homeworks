@@ -27,11 +27,11 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Gate::define("aprroveAllPost", function (User $user) {
-            if ($user->isAdmin()) {
-                return true;
-            }
-        });
+//        Gate::define("aprroveAllPost", function (User $user) {
+//            if ($user->isAdmin()) {
+//                return true;
+//            }
+//        });
 
 //        Gate::define("approve", function (User $user, Post $post) {
 //            return $post->user()->is($user);

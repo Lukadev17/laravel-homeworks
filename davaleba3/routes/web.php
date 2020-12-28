@@ -45,8 +45,6 @@ Route::get('/my_posts', [\App\Http\Controllers\PostController::class, 'myPosts']
 
 Route::post('/posts/{post}/approve', [\App\Http\Controllers\PostController::class, 'approve'])->name('approve');
 
-Route::get('/email/create', [\App\Http\Controllers\MailController::class, 'create'])->name('mail.create');
-
 Route::post('/email/send', [\App\Http\Controllers\MailController::class, 'send'])->name('send');
 
 Route::middleware('auth')->group( function () {
@@ -69,8 +67,6 @@ Route::middleware('auth')->group( function () {
     Route::post('/logout', [\App\Http\Controllers\LoginController::class, 'logout'])->name('logout');
 
     Route::post('/posts/{post}/approve', [\App\Http\Controllers\PostController::class, 'approve'])->name('approve');
-
-    Route::get('/email/create', [\App\Http\Controllers\MailController::class, 'create'])->name('mail.create');
 
     Route::post('/email/send', [\App\Http\Controllers\MailController::class, 'send'])->name('send');
 

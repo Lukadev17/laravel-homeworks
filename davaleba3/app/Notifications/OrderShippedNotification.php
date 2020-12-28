@@ -16,7 +16,7 @@ class OrderShippedNotification extends Notification
     /**
      * Create a new notification instance.
      *
-     * @return void
+     * @param $data
      */
     public function __construct($data)
     {
@@ -43,7 +43,7 @@ class OrderShippedNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->line('Post with id ' . $this->data['postId'] . ' approved notification.')
+            ->line('Post approved notification.')
             ->action('Click', url('/'))
             ->line('Thank you for using our application!');
     }

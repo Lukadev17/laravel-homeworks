@@ -8,10 +8,7 @@ use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
-    public function create() {
-//        return new OrderShippedMail();
-        return view('sendmail');
-    }
+
 
     public function send($data, Request $request) {
         Mail::to('admin@test.com')->send(new OrderShippedMail($data));

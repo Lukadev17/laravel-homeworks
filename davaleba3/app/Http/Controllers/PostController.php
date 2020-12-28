@@ -62,6 +62,7 @@ class PostController extends Controller
 
     public function approve(Post $post, Request $request) {
         $data = [
+            'postId' => $post->id,
             'postTitle' => $post->title
         ];
 
