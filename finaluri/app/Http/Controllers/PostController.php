@@ -47,7 +47,7 @@ class PostController extends Controller
         $user->notify(new AddPost($data));
 
         $posts = DB::table('posts')->where('user_id', $user->id)->get();
-        return view('myposts')->with('posts', $posts);
+        return redirect()->action([PostController::class, 'myPosts']);
     }
 
     public function edit($id) {
@@ -61,7 +61,7 @@ class PostController extends Controller
         $post->update($request->all());
         $user = User::findOrFail(Auth::id());
         $posts = DB::table('posts')->where('user_id', $user->id)->get();
-        return view('myposts')->with('posts', $posts);
+        return redirect()->action([PostController::class, 'myPosts']);
 
     }
 
@@ -69,7 +69,7 @@ class PostController extends Controller
         $post->delete();
         $user = User::findOrFail(Auth::id());
         $posts = DB::table('posts')->where('user_id', $user->id)->get();
-        return view('myposts')->with('posts', $posts);
+        return redirect()->action([PostController::class, 'myPosts']);
 
     }
 }

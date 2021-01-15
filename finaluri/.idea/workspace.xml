@@ -130,7 +130,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/laravel-homeworks-master (1)/laravel-homeworks-master/final" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -153,6 +153,7 @@
       <workItem from="1610710124423" duration="16562000" />
       <workItem from="1610735633576" duration="2713000" />
       <workItem from="1610739294939" duration="811000" />
+      <workItem from="1610740669812" duration="940000" />
     </task>
     <servers />
   </component>
@@ -168,9 +169,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610738309965" />
-    <state x="558" y="188" key="FileChooserDialogImpl" timestamp="1610722474505">
+    <state x="558" y="188" key="FileChooserDialogImpl" timestamp="1610741239454">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="558" y="188" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610722474505" />
+    <state x="558" y="188" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610741239454" />
   </component>
 </project>
