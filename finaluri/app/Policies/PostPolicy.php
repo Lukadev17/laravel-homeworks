@@ -91,7 +91,7 @@ class PostPolicy
         //
     }
 
-    public function approve(User $user, Post $post)
+    public function editPost(User $user, Post $post)
     {
         return $post->user()->is($user);
     }

@@ -19,9 +19,7 @@ class PostController extends Controller
     }
 
     public function myPosts() {
-        $user = User::findOrFail(Auth::id());
-        $posts = DB::table('posts')->where('user_id', $user->id)->get();
-
+        $posts = Post::where('user_id', '=', Auth::id())->get();
         return view('myposts')->with('posts', $posts);
     }
 

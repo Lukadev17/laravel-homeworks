@@ -45,27 +45,5 @@
     </div>
     </div>
     </div>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            $(document).on('click', '.btn-approve', function (e) {
-                e.preventDefault();
-                $this = $(this)
-                $.ajax({
-                    type: 'POST',
-                    url:  $this.attr('url'),
-                    success: function () {
-                        $this.removeClass('btn-dark');
-                        $this.addClass('btn-info');
-                        $this.text('The article was approved');
-                    }
-                });
-            });
-        });
-    </script>
 
 @endsection

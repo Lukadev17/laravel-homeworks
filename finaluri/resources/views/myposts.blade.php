@@ -29,12 +29,16 @@
                 <div class="p-6" style="margin: auto; width: 80%; border: 3px solid #212529;">
                     <div class="flex items-center" >
                         <div class="ml-4 text-lg leading-7 font-semibold"><a href="{{route('getPost', $myPost->id)}}" >{{$myPost->title}}</a></div><br/>
+                        @can('editPost', $myPost)
                         <a href="{{route('editPost', $myPost->id)}}" class="btn btn-lg btn-warning btn-sm ml-auto">EDIT</a><br/>
+                        @endcan
+                        @can('delete_post', $myPost)
                             <form method="post" action="{{route('deletePost', $myPost->id)}}">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-lg btn-danger btn-sm ml-auto" type="submit" >DELETE</button>
                             </form>
+                        @endcan
                     </div>
 
                     <div class="ml-4">
